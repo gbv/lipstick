@@ -1,0 +1,40 @@
+name                = iso2709
+file_extensions[]   = marc, mrc, pica, pp;
+background_color    = white
+color               = black
+
+contexts[] {
+  main : context {
+    : pattern {
+      regex \= (LDR|00\d)\s+(.+)
+      styles[] = .tag, .value;
+    }
+    : pattern {
+      regex \= (^[0-2]\d{2}[A-Z@]|=?\d{3})
+      styles[] = .tag;
+    }
+    : pattern {
+      regex \= (\$)([A-Za-z0-9])((\$\$|[^$])+)
+      styles[] = .subfielddelimter, .subfieldcode, .value, .value;
+    } 
+    : pattern {
+      regex \= (‡)([A-Za-z0-9])([^‡]+)
+      styles[] = .subfielddelimter, .subfieldcode, .value;
+    }
+  }
+} 
+
+styles[] {
+  .tag : style color = "navy"
+    textmate_scope = "Keyword"
+  ;
+  .subfielddelimter : style color = "light_blue"
+    textmate_scope = "Name"
+  ;  
+  .subfieldcode : style color = "navy"
+    textmate_scope = "Name"
+  ;
+  .value : style color = "orange"
+    textmate_scope = "Literal"
+  ;
+}
