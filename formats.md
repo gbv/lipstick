@@ -10,6 +10,8 @@ Despite its age **Machine-Readable Cataloging (MARC)** is still the most
 relevant data format used in library systems. MARC exist in several variants
 and it has influenced related formats, all loosely based on ISO 2709.
 
+See [syntax elements](syntax.md) for a description of the general record format.
+
 Records formats and format variants considered in this repository include:
 
 * MARC display format

@@ -1,7 +1,7 @@
 ---
 menus:
   header:
-    weight: 2
+    weight: 3
 ---
 
 # Highlighting languages
