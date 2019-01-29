@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
 {% seo %}
+
+    {% for url in page.css %}
+    <link rel="stylesheet" href="{{ url }}">
+    {% endfor %}
+    {% for style in page.style %}
+    <link rel="stylesheet" href="{{ style }}">
+    {% endfor %}
+
   </head>
 
   <body>
 
     <header>
       <div class="container">
-        <h1><a href="{{ site.baseurl }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{ site.baseurl }}/">{{ site.title | default: site.github.repository_name }}</a></h1>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
         <ul>
@@ -38,7 +45,18 @@
       <section id="main_content">
         {{ content }}
       </section>
+      {% include usage.html %}
     </div>
     
   </body>
 </html>
+
+{% for url in page.js %}
+<script src='{{ url }}'></script>
+{% endfor %}
+{% for script in page.lib %}
+<script src="{{ script | relative_url }}"></script>
+{% endfor %}
+{% for script in page.script %}
+<script src="{{ script }}"></script>
+{% endfor %}

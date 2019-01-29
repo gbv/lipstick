@@ -132,6 +132,18 @@ with a Lexer, which might be created automatically from a grammar file.
 BBEdit can be extended by [custom syntax definitions](https://www.barebones.com/support/develop/clm.html)
 based on property list format serialized in XML.
 
+## [Rainbow]
+
+Rainbow is a very simple highlighting library written in Javascript. Custom
+syntax definitions are defined in JavaScript by pairs of regular expressions
+and matching element names.
+
+### [Prism.js]
+
+Yet another syntax highlighter in JavaScript.
+
+[Prism.js]: http://prismjs.com/
+[Rainbow]: https://craig.is/making/rainbows
 [Monaco]: https://microsoft.github.io/monaco-editor/
 [BBEdit]: http://www.barebones.com/products/bbedit
 [NetBeans]: https://netbeans.apache.org/
@@ -146,7 +158,7 @@ based on property list format serialized in XML.
 [emacs]: https://www.gnu.org/software/emacs/
 [prettify]: https://github.com/google/code-prettify
 [highlight.js]: https://highlightjs.org/
-[CodeMirror]: https://codemirror.net/
+[CodeMirror]: codemirror/
 [jedit]: http://www.jedit.org/
 [Ultraedit]: https://www.ultraedit.com/
 [Notepad++]: https://notepad-plus-plus.org/

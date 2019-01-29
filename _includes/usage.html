@@ -1,0 +1,23 @@
+{% if page.script %}
+<section>
+<pre><code class="language-marc" id="example">{% 
+  include example.marc 
+%}</code></pre>
+</section>
+
+<section>
+  <h2>Usage</h2>
+  <pre><code class="language-html">{% for url in page.js
+  %}&lt;script src='{{ url }}'&gt;&lt;/script&gt;
+{% endfor %}{% for url in page.css 
+  %}&lt;link rel="stylesheet" href="{{ url }}"&gt;
+{% endfor %}{% for url in page.script 
+  %}&lt;script src='{{ url }}'&gt;&lt;/script&gt;
+{% endfor %}...
+&lt;pre>&lt;code class="language-marc">
+...put record data here...
+&lt;/code>&lt;/pre>
+</code></pre>
+
+</section>
+{% endif %}

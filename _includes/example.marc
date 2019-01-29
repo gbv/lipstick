@@ -1,0 +1,13 @@
+LDR/00-23  *****crm##22*****#a#4500
+005        19920902031155.0
+008/00-39  870119q18601869xxunnn############rn####d
+040	       ##$a[organization code]$c[organization code]
+
+=260  \\$aNew York :$bSingleton Press,$c2001.
+=700  1\‡aSmith, Mary.
+=008  010226s2001\\\\||||||||||||||\|eng\d
+
+003@    $0123456789
+021A    $aDas @Beispiel mit $$-Zeichen
+101@    $a23$cPICA
+203@/01 $09875

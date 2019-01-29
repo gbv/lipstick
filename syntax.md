@@ -14,11 +14,12 @@ The basic structure of [all record formats](formats.md) can be simplified as thi
 
 * a field is either a **fixed field** or a **variable field**
 
-* there is a special fixed field of a record called **leader**
+* there is a special fixed field called **leader**
 
 * a fixed fields consists of a **tag**, followed by a sequence of characters as **field value**
 
 * a variable field consists of
+
   * a **tag**
   * two **indicators** (MARC) or an optional **occurrence** (PICA)
   * a list of **subfields**
@@ -32,7 +33,7 @@ Format variants mainly differ in their separators, for instance binary ISO MARC
 used byte codes `0x1D`, `0x1D`, and `0x1F` to separate records, fields, and
 subfield separators respectively.
 
-### Data elements
+## Data elements
 
 Syntax highlighting is limited to readable format variants, for this reason we
 assume that **each field is one line**.
@@ -48,7 +49,7 @@ positions separated by `-`. A position consists of two digits (this extension
 is found in MARC examples).
 
 An indicator is a an ASCII alphabetic or numeric character, or blank. Blank
-indicators can be shown as `#`, `_` or a single space.
+indicators can be shown as `#`, `_`, `\`, or a single space.
 
 An occurrence is two or three digits, prepended with `/`
 
@@ -60,4 +61,11 @@ A subfield code is a single character.
 
 Additional whitespace should be allowed for readability.
 
+### Regular expressions
+
+#### Fixed fields
+
+~~~
+(=)?(LDR|\d{3})(/\d\d-\d\d)\s+(.*)
+~~~
 
