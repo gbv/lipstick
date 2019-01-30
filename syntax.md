@@ -55,17 +55,10 @@ An occurrence is two or three digits, prepended with `/`
 
 A subfield separator is `$` or `‡` but these characters should not be mixed in
 one field. The character can be escaped in subfield values by duplication (`$$`
-or `‡‡`).
+or `‡‡`). The double dagger symbol (`‡`=`U+2021`) could also be a palatal click
+symbol (`ǂ`=`U+01C2`).
 
 A subfield code is a single character.
 
 Additional whitespace should be allowed for readability.
-
-### Regular expressions
-
-#### Fixed fields
-
-~~~
-(=)?(LDR|\d{3})(/\d\d-\d\d)\s+(.*)
-~~~
 
