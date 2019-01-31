@@ -18,7 +18,7 @@ This page gives a summary of all relevant highlighting languages I could find.
 Coloring schemes that map these elements to specific text layout are not
 included.
 
-## MARC/PICA highlighting implemented
+## MARC/PICA highlighting available
 
 ### [vim](vim/)
 
@@ -29,7 +29,7 @@ format](http://vim.wikia.com/wiki/Creating_your_own_syntax_files).
 
 The CodeMirror editor library and its syntax definitions are written in JavaScript.
 
-## MARC/PICA highlighting not implemented (yet)
+## MARC/PICA highlighting not available (yet)
 
 ### [Textmate]
 
@@ -145,14 +145,30 @@ Rainbow is a very simple highlighting library written in Javascript. Custom
 syntax definitions are defined in JavaScript by pairs of regular expressions
 and matching element names.
 
-#### [Prism.js]
+### [Prism.js]
 
 Yet another syntax highlighter in JavaScript.
 
-#### [micro]
+### [micro]
 
 The micro editor uses [a custom YAML based format](https://github.com/zyedidia/micro/blob/master/runtime/help/colors.md#syntax-files) to defined syntax rules.
 
+### [GNU Source-highlight]
+
+A syntax highlighting library and command line client implemented in C++.
+
+### [highlight]
+
+A source code formatted text converter for the command line.
+
+### [bat]
+
+A clone of the `cat` command line tool with syntax highlighting. It uses the
+syntect highlighting library that can read Sublime syntax files.
+
+[bat]: https://github.com/sharkdp/bat
+[highlight]: https://github.com/tajmone/highlight
+[GNU Source-highlight]: https://www.gnu.org/software/src-highlite/
 [micro]: https://micro-editor.github.io/
 [Prism.js]: http://prismjs.com/
 [Rainbow]: https://craig.is/making/rainbows
