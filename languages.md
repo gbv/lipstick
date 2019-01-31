@@ -142,6 +142,11 @@ and matching element names.
 
 Yet another syntax highlighter in JavaScript.
 
+### [micro]
+
+The micro editor uses [a custom YAML based format](https://github.com/zyedidia/micro/blob/master/runtime/help/colors.md#syntax-files) to defined syntax rules.
+
+[micro]: https://micro-editor.github.io/
 [Prism.js]: http://prismjs.com/
 [Rainbow]: https://craig.is/making/rainbows
 [Monaco]: https://microsoft.github.io/monaco-editor/
