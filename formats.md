@@ -16,7 +16,7 @@ Records formats and format variants considered in this repository include:
 
 * MARC display format
 * MARCMaker
-* PICA Plain
+* PICA Plain (PICA+)
 
 Record formats not considered (or not considered yet) include:
 

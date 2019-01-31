@@ -86,13 +86,13 @@ CodeMirror.defineMode("marc", function() {
 
             // no subfields following, more likely a fixed field
             if (stream.match(/^[^‡$]+$/)) {
-              return TOKEN.value				
-			}            
+              return TOKEN.value                
+            }            
             return TOKEN.indicators
-		  } 
+          } 
 
           if (stream.match(/[^‡ǂ\$]+$/)) {
-        	return TOKEN.value
+            return TOKEN.value
           }
         }
       } 
@@ -104,7 +104,7 @@ CodeMirror.defineMode("marc", function() {
 
       if (state.next === 'subfield') {
         if (state.code) {
-		  if (stream.eat(state.code)) {
+          if (stream.eat(state.code)) {
             state.next = 'code'
             return TOKEN.subfield
           }
@@ -112,7 +112,7 @@ CodeMirror.defineMode("marc", function() {
           stream.eatSpace()
           var code = stream.peek()
           if (code === '‡' || code === '$') {
-		    stream.next()	
+            stream.next()    
             state.code = code
             state.next = 'code'
             return TOKEN.subfield
@@ -132,7 +132,7 @@ CodeMirror.defineMode("marc", function() {
         }
       }
 
-	  if (state.next === 'subfield-value') {
+      if (state.next === 'subfield-value') {
         state.next = 'subfield'
 
         while (stream.skipTo(state.code)) {
@@ -146,8 +146,8 @@ CodeMirror.defineMode("marc", function() {
 
         if (stream.peek() !== state.code) {
           stream.skipToEnd()
-		}
-		
+        }
+        
         return TOKEN.value
       }
 
