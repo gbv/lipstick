@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: MARC and related formats
 " Maintainer: Jakob Voß
-" Latest Revision: 31 January 2019
+" Latest Revision: 24 June 2020
 
 if exists("b:current_syntax")
   finish
@@ -23,8 +23,9 @@ syn match length '/\d\+-\d\+' nextgroup=fixedvalue
 
 
 " PICA tag and optional occurrence
-syn match picatag '[0-2]\d\d[A-Z@]' nextgroup=occurrence
-syn match occurrence '/\d\d\d\?' contained nextgroup=subfields
+syn match picatag '[0-2]\d\d[A-Z@]' nextgroup=occslash
+syn match occslash '/' nextgroup=occurrence
+syn match occurrence '\d\d\d\?' contained nextgroup=subfields
 
 " subfields
 syn region subfields start='[$‡ǂ]' end='\n' transparent contains=subfield,value,escaped oneline
@@ -37,18 +38,19 @@ let b:current_syntax = "marc"
 
 " Mapping of syntax elements to vim highlight groups:
 " Comment|Constant|Identifier|Statement|PreProc|Type|Special|Underline|Ignore|Error|Todo
-hi def link marctag     Type
-hi def link picatag     Type
+hi def link marctag     Identifier
+hi def link picatag     Identifier
 
-hi def link subfield    Statement
+hi def link subfield    Comment
 
-hi def link code        Identifier
+hi def link code        Special
+hi def link occslash    Comment
 hi def link occurrence  Identifier
 hi def link indicators  Identifier
 
-hi def link value       Constant
-hi def link escaped     Constant
-hi def link fixedfield  Constant
+hi def link value       Statement
+hi def link escaped     Statement
+hi def link fixedfield  Statement
 hi def link fixedvalue  Constant
 
 hi def link length      Comment

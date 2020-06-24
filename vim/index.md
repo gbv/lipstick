@@ -12,6 +12,10 @@ au BufRead,BufNewFile *.{marc,mrc,mrk,pica,pp} set filetype=marc
 
 The actual layout depends on your [vim color scheme](https://vimcolors.com/).
 
+## Example
+
+![](screenshot.png)
+
 ## Usage
 
 After installation, syntax highlighting should be enabled by default for files
