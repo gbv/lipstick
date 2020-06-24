@@ -5,11 +5,11 @@ Cataloging (MARC) and related [record formats](formats), such as PICA+.
 
 ## Give me highlighting!
 
-Syntax highlighting has been implemented for these [highlighting
-systems](languages) so far:
+Syntax highlighting has been implemented for these [highlighting systems](languages) so far:
 
 * [vim](vim/) editor
 * [CodeMirror](codemirror/) (HTML)
+* [Prism](prism/) (HTML, only PICA+ supported by now)
 
 *Contributions [are welcome](https://github.com/gbv/lipstick)!*
 
