@@ -45,7 +45,9 @@
       <section id="main_content">
         {{ content }}
       </section>
-      {% include usage.html %}
+      {% if page.showusage %}
+        {% include usage.html %}
+      {% endif %}
     </div>
     
   </body>
