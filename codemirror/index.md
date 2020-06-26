@@ -36,12 +36,13 @@ LDR/00-23  *****crm##22*****#a#4500
 ## Usage
 
 ~~~html
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.43.0/codemirror.min.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.43.0/codemirror.min.css">
-<script src='marc.js'></script>
-<script src='codemirror.js'></script>
 ...
 <pre><code class="language-marc">
 ...put record data here...
 </code></pre>
+...
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.43.0/codemirror.min.js'></script>
+<script src='marc.js'></script>
+<script src='codemirror.js'></script>
 ~~~

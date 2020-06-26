@@ -15,12 +15,12 @@ CodeMirror.defineMode("marc", function() {
  // hard-coded parser with improved fallback after errors
 
  const TOKEN = {
-    tag: 'keyword',
-    subfield: 'number',
-    code: 'attribute',
-    value: 'string',
-    occurrence: 'attribute',
-    indicators: 'attribute',
+    tag: 'variable-2',
+    occurrence: 'variable-2',
+    subfield: 'comment',
+    code: 'keyword',
+    indicators: 'variable-2',
+    value: 'number',
     length: 'comment',
     prefix: 'comment',
   }
